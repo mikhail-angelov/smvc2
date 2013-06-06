@@ -19,10 +19,14 @@ public class BookingServiceImpl implements BookingService {
 	{
 		model = new LinkedList<Meeting>();//maybe, we should sort it 
 	}
+	
+	public BookingServiceImpl(){
+		System.out.println("BookingServiceImpl constr");
+	}
 
 	@Override
 	public List<Meeting> getMeetingsList() {
-		System.out.println("get meetings");
+		System.out.println("get meetings mdl");
 		return model;
 	}
 
