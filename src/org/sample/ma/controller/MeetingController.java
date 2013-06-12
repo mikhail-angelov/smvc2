@@ -30,8 +30,9 @@ public class MeetingController {
 	public List<Meeting> addMeeting(@RequestParam("userId") String userId, 
 			@RequestParam("meetingStart") String meetingStart,
 			@RequestParam("duration") String duration){ 
+		//it should be a better way to pass form data into controller
 		//I did not find, why this declaration is not working (@RequestBody Meeting meeting)
-		System.out.println("add meeting " + userId);
+		System.out.println("adding meeting " + userId);
 		
 		boolean res = bookingService.bookMeeting(userId, meetingStart, duration);
 		if(res){
